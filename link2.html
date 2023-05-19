@@ -1,0 +1,53 @@
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Приветствие</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<h1><script language="JavaScript"><!--
+// begin script
+
+function display_title() {
+var hours = date.getHours(); 
+var message = '';
+
+ if (hours >= 6) { time_of_day = 'Вы уже проснулись?'; message='Morning Message';}
+ if ((hours >= 12) && (hours < 17)) { time_of_day = 'Добрый день'; message='Afternoon Message'}
+ if (hours >= 17) { time_of_day = 'Добрый вечер'; message='Evening Message';} 
+ if ((hours >= 0) && (hours < 6)){ time_of_day = 'Почему не спишь???'; message='Night Message';} 
+
+document.write('<CENTER><H1>Здравствуйте, ' + time_of_day + '!</H1></CENTER><P>');
+   }
+//   document.write('<CENTER>' + message + '<CENTER>'); 
+//end display title
+
+function display_date() {
+
+   date = new Date();
+
+   var day_of_week_number = date.getDay();
+   var day_of_month = date.getDate();
+   var month_number = date.getMonth();
+   var year = date.getYear();
+   var day_of_week = '';
+   var month = ''
+
+   var date_to_show = day_of_week; 
+
+   document.write('<CENTER><H4>' + date_to_show.fontcolor("#000000") + '</H4></CENTER>');
+ 
+} //end display date
+
+// --></script></h1>
+
+<h1><font color="#FF0000"><script language="javascript"><!-- begin script
+
+        display_date();
+    display_title();
+//--></script></font></h1>
+</body>
+</html>
